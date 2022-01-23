@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ptu-UB-cO0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cairo-Black.ttf">
+            <string>Cairo-Black</string>
+        </array>
+        <array key="Cairo-SemiBold.ttf">
+            <string>Cairo-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--OrdersVC-->
+        <scene sceneID="kA6-oq-xg6">
+            <objects>
+                <viewController storyboardIdentifier="OrdersVC" id="Ptu-UB-cO0" customClass="OrdersVC" customModule="OrdersBothOfUs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gSE-of-xiG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z3Y-ah-Nce" customClass="RoundedShadowView" customModule="OrdersBothOfUs" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekh-nM-ehL">
+                                        <rect key="frame" x="124" y="39" width="166" height="35.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3i-BL-oJF" customClass="ButtonRounded" customModule="OrdersBothOfUs" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="166" height="35.5"/>
+                                                <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="RESET DATA">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnResetPRessed:" destination="Ptu-UB-cO0" eventType="touchUpInside" id="xwO-dY-eog"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ekh-nM-ehL" firstAttribute="width" secondItem="z3Y-ah-Nce" secondAttribute="width" multiplier="0.4" id="JcK-zg-y5N"/>
+                                    <constraint firstItem="ekh-nM-ehL" firstAttribute="height" secondItem="z3Y-ah-Nce" secondAttribute="height" multiplier="0.4" id="cj7-ZO-R7P"/>
+                                    <constraint firstItem="ekh-nM-ehL" firstAttribute="centerX" secondItem="z3Y-ah-Nce" secondAttribute="centerX" id="mXc-BF-YdK"/>
+                                    <constraint firstItem="ekh-nM-ehL" firstAttribute="centerY" secondItem="z3Y-ah-Nce" secondAttribute="centerY" constant="12" id="sss-RC-lGF"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HlE-26-1TV" customClass="CustomSegmented" customModule="OrdersBothOfUs" customModuleProvider="target">
+                                <rect key="frame" x="4" y="89.5" width="406" height="54.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Current Orders"/>
+                                    <segment title="Previous Orders"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.92070430520000002" green="0.57830590110000002" blue="0.27639737130000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cv3-EU-LrD" customClass="TanibleView" customModule="OrdersBothOfUs" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="151" width="414" height="711"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ytQ-Bf-J5U"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z3Y-ah-Nce" firstAttribute="top" secondItem="gSE-of-xiG" secondAttribute="top" id="0Y0-Fa-X5r"/>
+                            <constraint firstItem="cv3-EU-LrD" firstAttribute="leading" secondItem="ytQ-Bf-J5U" secondAttribute="leading" id="6S1-IR-Nyi"/>
+                            <constraint firstItem="HlE-26-1TV" firstAttribute="leading" secondItem="ytQ-Bf-J5U" secondAttribute="leading" constant="4" id="FiM-ic-FUV"/>
+                            <constraint firstItem="z3Y-ah-Nce" firstAttribute="leading" secondItem="ytQ-Bf-J5U" secondAttribute="leading" id="TZ1-vh-4X8"/>
+                            <constraint firstItem="ytQ-Bf-J5U" firstAttribute="bottom" secondItem="cv3-EU-LrD" secondAttribute="bottom" id="US4-zG-gMa"/>
+                            <constraint firstItem="z3Y-ah-Nce" firstAttribute="trailing" secondItem="ytQ-Bf-J5U" secondAttribute="trailing" id="VfB-3J-v6M"/>
+                            <constraint firstItem="ytQ-Bf-J5U" firstAttribute="trailing" secondItem="HlE-26-1TV" secondAttribute="trailing" constant="4" id="WPk-3d-4fg"/>
+                            <constraint firstItem="z3Y-ah-Nce" firstAttribute="height" secondItem="gSE-of-xiG" secondAttribute="height" multiplier="0.0998884" id="b92-uO-rmk"/>
+                            <constraint firstItem="cv3-EU-LrD" firstAttribute="top" secondItem="HlE-26-1TV" secondAttribute="bottom" constant="8" id="b9e-io-Jxd"/>
+                            <constraint firstItem="HlE-26-1TV" firstAttribute="top" secondItem="z3Y-ah-Nce" secondAttribute="bottom" id="naE-JA-vvU"/>
+                            <constraint firstItem="HlE-26-1TV" firstAttribute="height" secondItem="z3Y-ah-Nce" secondAttribute="height" multiplier="0.6" id="pUR-jM-9eI"/>
+                            <constraint firstItem="ytQ-Bf-J5U" firstAttribute="trailing" secondItem="cv3-EU-LrD" secondAttribute="trailing" id="sdj-y1-QT2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="orderTableView" destination="cv3-EU-LrD" id="eYQ-j9-2jy"/>
+                        <outlet property="segmentedControl" destination="HlE-26-1TV" id="YQf-vK-RYd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RQj-kn-laG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2899" y="133"/>
+        </scene>
+        <!--Order DetailVC-->
+        <scene sceneID="oSz-3N-cpt">
+            <objects>
+                <viewController storyboardIdentifier="OrderDetailVC" id="2ye-n0-xcW" customClass="OrderDetailVC" customModule="OrdersBothOfUs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dyc-xc-54u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6WB-Dz-GpR" customClass="RoundedShadowView" customModule="OrdersBothOfUs" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gA-MI-n2c">
+                                        <rect key="frame" x="16" y="43" width="36" height="35.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="5gA-MI-n2c" secondAttribute="height" id="Ysm-oI-hcz"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="btnBackPressed:" destination="2ye-n0-xcW" eventType="touchUpInside" id="SEG-wo-rrU"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUt-WK-hCu">
+                                        <rect key="frame" x="134" y="46" width="146.5" height="29.5"/>
+                                        <fontDescription key="fontDescription" name="Cairo-Black" family="Cairo Black" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="20"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92070430520000002" green="0.57830590110000002" blue="0.27639737130000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="BUt-WK-hCu" firstAttribute="centerX" secondItem="6WB-Dz-GpR" secondAttribute="centerX" id="35X-qQ-4tO"/>
+                                    <constraint firstItem="5gA-MI-n2c" firstAttribute="leading" secondItem="6WB-Dz-GpR" secondAttribute="leading" constant="16" id="EQ9-a5-IwU"/>
+                                    <constraint firstItem="BUt-WK-hCu" firstAttribute="centerY" secondItem="5gA-MI-n2c" secondAttribute="centerY" id="HJP-PN-ILx"/>
+                                    <constraint firstItem="5gA-MI-n2c" firstAttribute="height" secondItem="6WB-Dz-GpR" secondAttribute="height" multiplier="0.4" id="Yc4-rQ-cYs"/>
+                                    <constraint firstItem="5gA-MI-n2c" firstAttribute="centerY" secondItem="6WB-Dz-GpR" secondAttribute="centerY" constant="16" id="pl2-vb-Reb"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oB5-iJ-1nt" customClass="TanibleView" customModule="OrdersBothOfUs" customModuleProvider="target">
+                                <rect key="frame" x="8" y="97.5" width="398" height="635"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VWu-Ji-N4W" customClass="RoundedShadowView" customModule="OrdersBothOfUs" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="806.5" width="414" height="89.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F1o-0u-M2U">
+                                        <rect key="frame" x="143.5" y="31" width="127" height="27.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nnq-NC-2J1">
+                                                <rect key="frame" x="0.0" y="0.0" width="47.5" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="20"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2224 LE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSl-L0-GxA">
+                                                <rect key="frame" x="55.5" y="0.0" width="71.5" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="20"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92070430520000002" green="0.57830590110000002" blue="0.27639737130000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="F1o-0u-M2U" firstAttribute="centerY" secondItem="VWu-Ji-N4W" secondAttribute="centerY" id="Cyi-yr-TqW"/>
+                                    <constraint firstItem="F1o-0u-M2U" firstAttribute="centerX" secondItem="VWu-Ji-N4W" secondAttribute="centerX" id="RVf-fD-8Mn"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cao-fN-ebe">
+                                <rect key="frame" x="210.5" y="740.5" width="195.5" height="58"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rDN-Ob-a9n">
+                                        <rect key="frame" x="0.0" y="0.0" width="195.5" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KM7-Gf-pC9">
+                                                <rect key="frame" x="0.0" y="0.0" width="145" height="25"/>
+                                                <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="18"/>
+                                                <color key="textColor" red="0.92070430520000002" green="0.57830590110000002" blue="0.27639737130000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="24"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23/5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuX-pE-5pW">
+                                                <rect key="frame" x="153" y="0.0" width="42.5" height="25"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                                <color key="textColor" name="hyperBlue"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="20"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5KB-wi-XpB">
+                                        <rect key="frame" x="0.0" y="33" width="195.5" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Charging Cost" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKm-Yx-tq0">
+                                                <rect key="frame" x="0.0" y="0.0" width="116" height="25"/>
+                                                <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="18"/>
+                                                <color key="textColor" red="0.92070430520000002" green="0.57830590110000002" blue="0.27639737130000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="24"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2839 LE" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywb-SW-gBP">
+                                                <rect key="frame" x="124" y="0.0" width="71.5" height="25"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                                <color key="textColor" name="hyperBlue"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="20"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhr-Zc-mWK" customClass="ButtonRounded" customModule="OrdersBothOfUs" customModuleProvider="target">
+                                <rect key="frame" x="8" y="749.5" width="165.5" height="40"/>
+                                <color key="backgroundColor" red="0.011621218169999999" green="0.48542422060000001" blue="0.67220634219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Cairo-Black" family="Cairo Black" pointSize="24"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Re-Order"/>
+                                <connections>
+                                    <action selector="btnReOrderPressed:" destination="2ye-n0-xcW" eventType="touchUpInside" id="ZfF-K5-RJt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pv9-OU-baq"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oB5-iJ-1nt" firstAttribute="leading" secondItem="Pv9-OU-baq" secondAttribute="leading" constant="8" id="1v9-gk-h8N"/>
+                            <constraint firstItem="6WB-Dz-GpR" firstAttribute="leading" secondItem="dyc-xc-54u" secondAttribute="leading" id="5Ey-0v-H4I"/>
+                            <constraint firstItem="VWu-Ji-N4W" firstAttribute="leading" secondItem="Pv9-OU-baq" secondAttribute="leading" id="5vY-Xt-ngU"/>
+                            <constraint firstItem="Pv9-OU-baq" firstAttribute="trailing" secondItem="cao-fN-ebe" secondAttribute="trailing" constant="8" id="A2a-Ja-FLc"/>
+                            <constraint firstItem="6WB-Dz-GpR" firstAttribute="height" secondItem="dyc-xc-54u" secondAttribute="height" multiplier="0.0998884" id="DN3-MR-EN4"/>
+                            <constraint firstItem="Pv9-OU-baq" firstAttribute="trailing" secondItem="VWu-Ji-N4W" secondAttribute="trailing" id="EhF-qD-IOx"/>
+                            <constraint firstItem="lhr-Zc-mWK" firstAttribute="centerY" secondItem="cao-fN-ebe" secondAttribute="centerY" id="Hoh-6z-TRp"/>
+                            <constraint firstItem="Pv9-OU-baq" firstAttribute="trailing" secondItem="oB5-iJ-1nt" secondAttribute="trailing" constant="8" id="Pli-gO-han"/>
+                            <constraint firstItem="lhr-Zc-mWK" firstAttribute="leading" secondItem="Pv9-OU-baq" secondAttribute="leading" constant="8" id="QO2-TB-PYX"/>
+                            <constraint firstItem="cao-fN-ebe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lhr-Zc-mWK" secondAttribute="trailing" constant="4" id="S6f-H2-KU0"/>
+                            <constraint firstItem="VWu-Ji-N4W" firstAttribute="height" secondItem="dyc-xc-54u" secondAttribute="height" multiplier="0.1" id="TbS-uc-OKL"/>
+                            <constraint firstItem="lhr-Zc-mWK" firstAttribute="width" secondItem="dyc-xc-54u" secondAttribute="width" multiplier="0.4" id="Uce-wQ-vnE"/>
+                            <constraint firstAttribute="bottom" secondItem="VWu-Ji-N4W" secondAttribute="bottom" id="Xb3-cg-1Pr"/>
+                            <constraint firstItem="6WB-Dz-GpR" firstAttribute="top" secondItem="dyc-xc-54u" secondAttribute="top" id="c0C-Xn-DQR"/>
+                            <constraint firstItem="cao-fN-ebe" firstAttribute="top" secondItem="oB5-iJ-1nt" secondAttribute="bottom" constant="8" id="gZe-oZ-FKH"/>
+                            <constraint firstItem="Pv9-OU-baq" firstAttribute="trailing" secondItem="6WB-Dz-GpR" secondAttribute="trailing" id="gb6-kT-C4h"/>
+                            <constraint firstItem="oB5-iJ-1nt" firstAttribute="top" secondItem="6WB-Dz-GpR" secondAttribute="bottom" constant="8" id="kER-bn-tcD"/>
+                            <constraint firstItem="VWu-Ji-N4W" firstAttribute="top" secondItem="cao-fN-ebe" secondAttribute="bottom" constant="8" id="rbs-T6-Vd9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnReOrder" destination="lhr-Zc-mWK" id="PXT-2P-aZw"/>
+                        <outlet property="lblCharge" destination="Ywb-SW-gBP" id="Zl4-qg-uH0"/>
+                        <outlet property="lblDate" destination="zuX-pE-5pW" id="Fcb-Uj-lxc"/>
+                        <outlet property="lblTotal" destination="eSl-L0-GxA" id="2mu-gf-t4F"/>
+                        <outlet property="orderDetailTableView" destination="oB5-iJ-1nt" id="xVh-GU-Mw2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hC0-IK-Rvk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3837.68115942029" y="124.55357142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="13.5" height="25"/>
+        <namedColor name="hyperBlue">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
